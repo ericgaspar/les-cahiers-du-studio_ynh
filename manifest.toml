@@ -1,0 +1,108 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "cahiers"
+name = "Les Cahiers du Studio"
+description.en = "Documentation tool for creativity"
+description.fr = "Plateforme de documentation pour archiver et diffuser des temps de création"
+
+version = "2.3.4~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "AGPL-3.0-only"
+website = "https://dodoc.fr/"
+demo = "https://test.dodoc.fr/"
+admindoc = "https://github.com/l-atelier-des-chercheurs/Les-Cahiers-du-Studio#readme"
+code = "https://github.com/l-atelier-des-chercheurs/Les-Cahiers-du-Studio/"
+
+[integration]
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+sso = false
+
+disk = "512M"
+ram.build = "1G"
+ram.runtime = "512M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    url = "https://github.com/l-atelier-des-chercheurs/Les-Cahiers-du-Studio/archive/refs/heads/node.zip"
+    sha256 = "5ac8d9a6579177cb80672067c6c7896b6bb594bbe6232fe6c6d311d1efa2b4f3"
+    #autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+    main.auth_header = false
+
+    [resources.ports]
+
+    [resources.apt]
+    packages = [
+    "ffmpeg",
+    "build-essential",
+    "libjpeg-dev",
+    "libgif-dev",
+    "libgconf-2-4",
+    "libpango1.0-dev",
+    "libc6",
+    "libnss3",
+    "librsvg2-dev",
+    "libxcomposite1",
+    "libasound2",
+    "libatk1.0-0",
+    "libatk-bridge2.0-0",
+    "libcairo2",
+    "libcairo2-dev",
+    "libcups2",
+    "libdbus-1-3",
+    "libexpat1",
+    "libfontconfig1",
+    "libgbm1",
+    "libgcc1",
+    "libglib2.0-0",
+    "libgtk-3-0",
+    "libnspr4",
+    "libpango-1.0-0",
+    "libpangocairo-1.0-0",
+    "libstdc++6",
+    "libx11-6",
+    "libx11-xcb1",
+    "libxcb1",
+    "libxcomposite1",
+    "libxcursor1",
+    "libxdamage1",
+    "libxext6",
+    "libxfixes3",
+    "libxi6",
+    "libxrandr2",
+    "libxrender1",
+    "libxss1",
+    "libxtst6",
+    "xdg-utils",
+    "lsb-release",
+    "wget"
+    ]

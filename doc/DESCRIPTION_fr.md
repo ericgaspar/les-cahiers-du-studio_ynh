@@ -1,0 +1,1 @@
+Un outil collaboratif de documentation chronologique pour une prise de notes multimédia lors d’une activité ou d’un événement.
