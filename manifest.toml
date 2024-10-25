@@ -4,7 +4,7 @@ packaging_format = 2
 
 id = "cahiers"
 name = "Les Cahiers du Studio"
-description.en = "Documentation tool for creativity"
+description.en = "Documentation platform to archive and distribute creative times"
 description.fr = "Plateforme de documentation pour archiver et diffuser des temps de création"
 
 version = "2.3.4~ynh1"
@@ -15,7 +15,7 @@ maintainers = ["eric_G"]
 license = "AGPL-3.0-only"
 website = "https://dodoc.fr/"
 demo = "https://test.dodoc.fr/"
-admindoc = "https://github.com/l-atelier-des-chercheurs/Les-Cahiers-du-Studio#readme"
+admindoc = "https://latelier-des-chercheurs.fr/docs/manuel-les-cahiers-du-studio"
 code = "https://github.com/l-atelier-des-chercheurs/Les-Cahiers-du-Studio/"
 
 [integration]
